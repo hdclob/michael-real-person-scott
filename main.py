@@ -1,16 +1,26 @@
-import tweepy
+from random import random
+import tweepy, config, random
+from giphy import Giphy
+from urllib import request
+import text_generator
 
-api_key = 'kpXXI89WorsuuRR8lRSaRZ54I'
-api_key_secret = 'DvtBuY2J3udg0omEInJeQJm9mbmUUVOEEGU5dMcRBO9FuSveAW'
-access_token = '750243721-yBeLXfNlVi1ChORd5yHTyTlNGzKEsQoOqfWAbL74'
-access_token_secret = 'v8DZ5G2zS0uG52j4D3CBiBHf5NXNn2IEqtYFSY7j9D0JW'
+def main():
+	# twitter_api = tweepy.API(tweepy.OAuth1UserHandler(
+	# 	config.TWITTER_API_KEY, config.TWITTER_API_KEY_SECRET, config.TWITTER_ACCESS_TOKEN, config.TWITTER_ACCESS_TOKEN_SECRET
+	# ))
 
-auth = tweepy.OAuth1UserHandler(
-	api_key, api_key_secret, access_token, access_token_secret
-)
+	# giphy = Giphy(config.GIPHY_API_KEY)
 
-api = tweepy.API(auth)
+	# resp = giphy.search_gifs('michael scott')
 
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
-	print(tweet.text)
+	# total_count = resp['pagination']['total_count']
+
+	# resp = giphy.search_gifs('michael scott', random.randint(0, total_count - 1))
+
+	# request.urlretrieve(resp['data'][0]['images']['original']['url'], 'temp.gif')
+
+	print(text_generator.generateText('jesus'))
+
+if __name__ == "__main__":
+    main()
+
