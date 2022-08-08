@@ -59,10 +59,6 @@ class MichaelScott:
 		request.urlretrieve(resp['data'][0]['images']['downsized']['url'], 'temp.gif')
 
 	def start(self):
-		self.__download_random_gif()
-		# self.twitter.update_status_with_media('', 'temp.gif')
-
-		print('Michael Scott just tweeted a stupid GIF')
 		try:
 			while True:
 				self.post_gif = bool(random.randint(0, 1))
