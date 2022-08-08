@@ -1,3 +1,6 @@
 venv
 *.old*
-config.py
+.env
+test.txt
+temp.gif
+__pycache__
